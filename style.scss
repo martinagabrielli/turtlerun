@@ -1,5 +1,40 @@
 .start {
-    background: green;
-    width: 100px;
+    background:lightseagreen;
+    width: 200px;
     height: 100px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#turtle {
+    // background-color: green;
+    width: 150px;
+    height: 100px;
+    //background-image: url(img/turtle.png);
+    //background-repeat: no-repeat;
+    background: url(img/turtle.png) no-repeat;
+    background-size: 100px;
+    position: absolute;
+    top: 500px;
+    left: 0;
+    transition: left 1s;
+    &.animate {
+        position: absolute;
+        left: calc(100% - 100px);
+    }
+}
+
+.finish {
+    background-color: red;
+    background: url(img/flag.gif) no-repeat;
+    background-size: 200px;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 400px;
+    right: 10px;
 }
