@@ -1,16 +1,38 @@
-.start {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* .sky {
+  background-color: skyblue;
+  width: 100%;
+  height: 585px;
+}
+
+* .button {
   background: lightseagreen;
-  width: 200px;
-  height: 100px;
-  display: block;
-  margin: 0 auto;
+  width: 100px;
+  height: 50px;
   border: 1px solid black;
   border-radius: 20px;
   font-size: 30px;
   cursor: pointer;
+  position: relative;
+  bottom: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#turtle {
+* .button.start:after {
+  content: "Start!";
+}
+
+* .button.default:after {
+  content: "Default";
+}
+
+* #turtle {
   width: 150px;
   height: 100px;
   background: url(img/turtle.png) no-repeat;
@@ -22,12 +44,19 @@
   transition: left 1s;
 }
 
-#turtle.animate {
+* #turtle.animate {
   position: absolute;
   left: calc(100% - 160px);
 }
 
-.finish {
+* #turtle.flip {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  -webkit-filter: FlipH;
+          filter: FlipH;
+}
+
+* .finish {
   background-color: red;
   background: url(img/flag.gif) no-repeat;
   background-size: 200px;
@@ -36,5 +65,14 @@
   position: absolute;
   top: 400px;
   right: 10px;
+}
+
+* .land {
+  background-color: green;
+  width: 100%;
+  height: 60vh;
+  position: absolute;
+  top: 585px;
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */
